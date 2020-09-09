@@ -28,7 +28,6 @@ import React, {useState} from 'react';
 import Posts from './components/Posts';
 import SearchBar from './components/SearchBar';
 import dummyData from './dummy-data';
-import Comments from './components/Comments';
 
 
 import './App.css';
@@ -38,12 +37,12 @@ const App = () => {
   
   
 
-  /*
+  
    const likePost = postId => {
     setPosts(
       posts.map((it) => {
-        if (postID === it.id) {
-        s  return { ...it, likes: it.likes + 1};
+        if (postId === it.id) {
+          return { ...it, likes: it.likes + 1};
         };
         return it; 
       })
@@ -52,13 +51,13 @@ const App = () => {
     
     
     
-  */
+  
 
   return (
     <div className='App'>
-      {SearchBar}
-      {Posts}
-      <Comments id="22"/>
+      <SearchBar/>
+    <Posts likePost={likePost} post/>
+      
     </div>
   );
 };
