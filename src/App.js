@@ -25,9 +25,10 @@
      */
 
 import React, {useState} from 'react';
-import Posts from './components/Posts';
-import SearchBar from './components/SearchBar';
+
+import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
+import Posts from './components/Posts/Posts';
 
 
 import './App.css';
@@ -56,7 +57,7 @@ const App = () => {
   return (
     <div className='App'>
       <SearchBar/>
-    <Posts likePost={likePost} post/>
+    <Posts likePost={likePost} posts={posts}/>
       
     </div>
   );
